@@ -1,0 +1,33 @@
+
+
+<div class="books new">
+  <h2>Create Task</h2>
+
+  <%= form_for(@book) do |f| %>
+    <% # url: tasks_path, method: 'post' %>
+
+    <table summary="Book form fields">
+      <tr>
+        <th>Name</th>
+        <td><%= f.text_field(:name) %></td>
+      </tr>
+      <tr>
+        <th>Position</th>
+        <td><%= f.text_field(:position) %></td>
+      </tr>
+      <tr>
+        <th>Read</th>
+        <td><%= f.check_box(:read) %></td>
+      </tr>
+      <tr>
+        <th>Description</th>
+        <td><%= f.text_area(:description) %></td>
+      </tr>
+    </table>
+
+    <div class="form-buttons">
+      <%= f.submit("Add Book") %>
+    </div>
+
+  <% end %>
+</div>
